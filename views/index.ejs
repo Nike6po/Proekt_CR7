@@ -1,4 +1,189 @@
-<% layout('./layout/page.ejs') %>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-    <button type="button" class="btn btn-danger">Danger</button>
+    <!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Activitar Template">
+    <meta name="keywords" content="Activitar, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Саша Просоленко - Легко!</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700,800,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="/css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="/css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="/css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header Section Begin -->
+    <header class="header-section">
+        <div class="container-fluid">
+            <div class="logo">
+                <a href="/">
+                    <img src="/img/logo1.png" alt="">
+                </a>
+            </div>
+            <div class="container">
+                <div class="nav-menu">
+                    <nav class="mainmenu mobile-menu">
+                        <ul>
+                            <li class="active"><a href="/">Дом</a></li>
+                            <li><a href="/ronaldo_statistic">Статистика Роналду</a></li>
+                            <li><a href="/ronaldo_awards">Награды Роналду</a></li>
+                            <li><a href="/ronaldo_family">Семья Роналду</a></li>
+                                <ul class="dropdown">
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div id="mobile-menu-wrap"></div>
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Hero Section Begin -->
+    <section class="hero-section">
+        <div class="hero-items owl-carousel">
+            <div class="single-hero-item set-bg" data-setbg="/img/hero-slider/hero-11.jpg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="hero-text">
+                                <h2>Роналду лучший бомбардир человечества</h2>
+                                <h1>954 гола</h1>
+                                <a class="primary-btn" href="/ronaldo_statistic">Его статистика</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="single-hero-item set-bg" data-setbg="/img/hero-slider/hero-222.jpg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="hero-text">
+                                <h2>Роналду топ</h2>
+                                <h1>Лучший из лучших</h1>
+                                <a class="primary-btn" href="/ronaldo_awards">Его награды</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="single-hero-item set-bg" data-setbg="/img/hero-slider/hero-44.jpg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="hero-text">
+                                <h2>Роналду красив</h2>
+                                <h1>Как и его семья</h1>
+                                <a class="primary-btn" href="/ronaldo_family">Его семья</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Hero End -->
+
+    <!-- Feature Section Begin -->
+    <section class="feature-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="feature-item set-bg" data-setbg="/img/feature/feature-11.jpg">
+                        <h3>И вправду хорош!</h3>
+                        <p>Роналду действительно поражает все человечество<br /> своими рекордами</p>
+                        <a href="/ronaldo_statistic" class="primary-btn f-btn">Читать больше</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-item set-bg" data-setbg="/img/feature/feature-22.jpg">
+                        <h3>Усиленные тренировки</h3>
+                        <p>Помогли завоевать ему практически<br /> все возмыжные награды</p>
+                        <a href="/ronaldo_awards" class="primary-btn f-btn">Читать больше</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-item set-bg" data-setbg="/img/feature/feature-33.jpg">
+                        <h3>Семья</h3>
+                        <p>Которая и вправду мотивирует его<br /> только совершенствоваться</p>
+                        <a href="/ronaldo_family" class="primary-btn f-btn">Читать больше</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Feature Section End -->
+
+    <!-- About Section Begin -->
+    <section class="home-about spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="about-text">
+                        <h2>Роналду фоткался со мной!!!</h2>
+                        <p class="short-details">Поразительно, как даже самые знаменитые звезды не отказывают своим фанатам в простом фото
+                        <p class="long-details">Именно так и произошло, когда я отдыхал со своими друзьями в Бахчисарае. Мимо нашего домика проходил Криштиану Роналду, который приехал в Бахчисарай со сборной Португалии отдохнуть.
+                            И он, решив не терять момент, попросил фото со мной, находясь прямо в тренировочной форме. Я в этот момент все снимал на экшн камеру, но к сожалению записи не сохранились.</p>
+                        </p>
+                        <a href="#" class="primary-btn about-btn">Пожаловаться</a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-img">
+                        <img src="/img/home1.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section End -->
+
+    <!-- Classes Section Begin -->
+    <section class="classes-section">
+        <div class="class-title set-bg" data-setbg="/img/classes-title-bg.jpg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7 m-auto text-center">
+                        <div class="section-title pl-lg-4 pr-lg-4 pl-0 pr-0">
+                            <h2>Это конец страницы</h2>
+                            <p>Я очень надеюсь, что вам понравился данный проект, и надеюсь на вашу поддержку!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+
+    <!-- Js Plugins -->
+    <script src="/js/jquery-3.3.1.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/jquery.magnific-popup.min.js"></script>
+    <script src="/js/mixitup.min.js"></script>
+    <script src="/js/jquery.nice-select.min.js"></script>
+    <script src="/js/jquery.slicknav.js"></script>
+    <script src="/js/owl.carousel.min.js"></script>
+    <script src="/js/masonry.pkgd.min.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+
+</html>

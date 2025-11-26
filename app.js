@@ -39,4 +39,9 @@ app.use(function(err, req, res, next) {
   res.render('error',{title: 'Cristiano Ronaldo'});
 });
 
+app.use(express.static('public'));
+app.get('/', (req, res) => {
+  res.render('index');
+});
+
 module.exports = app;
