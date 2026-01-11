@@ -1,9 +1,16 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://127.0.0.1:27017/testMongoose2024');
+mongoose.connect('mongodb://127.0.0.1:27017/testMongoose2025');
 
 
-const Cat = mongoose.model('Cat', { name: String });
+var schema = mongoose.Schema({ name: String })
 
 
-const kitty = new Cat({ name: 'Пушок' });
-kitty.save().then(() => console.log('Мяу'));
+schema.methods.meow = function(){
+   console.log(this.name + " сказал Suiiii")
+}
+
+const Cat = mongoose.model('Cat', schema);
+
+
+const kitty = new Cat({ name: 'Роналду' });
+kitty.save().then(() => kitty.meow());
