@@ -47,7 +47,17 @@
                             <li><a href="/ronaldo_statistic">Статистика Роналду</a></li>
                             <li><a href="/ronaldo_awards">Награды Роналду</a></li>
                             <li><a href="/ronaldo_family">Семья Роналду</a></li>
-                            <li><a class="nav-link" href="/logreg">Войти</a></li>
+                            <li><%if(user){%>
+                                <form action="/logout" method="post">
+                                <li class="nav-item">
+                                    <button type="submit" class="nav-link">Выйти</button>
+                                    </li>
+                                </form>
+                                <% } else { %>    
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/logreg">Войти</a>
+                                    </li>
+                                <% } %></li>
                                 <ul class="dropdown">
                                 </ul>
                             </li>
