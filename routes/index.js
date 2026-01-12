@@ -7,6 +7,11 @@ router.get('/', function(req, res, next) {
  res.render('index', { title: 'Express', counter: req.session.counter });
 });
 
+/* GET login/registration page. */
+router.get('/logreg', function(req, res, next) {
+ res.render('logreg',{title: 'Вход'});
+ });
+
 
 /* Статистика Роналду */
 router.get('/ronaldo_statistic', function(req, res, next) {
