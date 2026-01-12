@@ -68,9 +68,15 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="hero-text">
+                                <% if(user) {%>
+                                <h1>Привет <%= user.username %></h1>
                                 <h2>Роналду лучший бомбардир человечества</h2>
                                 <h1>954 гола</h1>
                                 <a class="primary-btn" href="/ronaldo_statistic">Его статистика</a>
+                                <% }else{ %>
+                                <h1>Привет незалогиненный пользователь</h1>
+                                <a class="primary-btn" href="/logreg">Регистрация</a>
+                                <% } %>
                             </div>
                         </div>
                     </div>
@@ -81,9 +87,14 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="hero-text">
+                                <% if(user) {%>
                                 <h2>Роналду топ</h2>
                                 <h1>Лучший из лучших</h1>
                                 <a class="primary-btn" href="/ronaldo_awards">Его награды</a>
+                                <% }else{ %>
+                                <h1>Зарегистрируйся пожалуйста</h1>
+                                <a class="primary-btn" href="/logreg">Регистрация</a>
+                                <% } %>
                             </div>
                         </div>
                     </div>
@@ -94,9 +105,14 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="hero-text">
+                                <% if(user) {%>
                                 <h2>Роналду красив</h2>
                                 <h1>Как и его семья</h1>
                                 <a class="primary-btn" href="/ronaldo_family">Его семья</a>
+                                <% }else{ %>
+                                <h1>Оно того стоит!</h1>
+                                <a class="primary-btn" href="/logreg">Регистрация</a>
+                                <% } %>
                             </div>
                         </div>
                     </div>
