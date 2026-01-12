@@ -1,52 +1,80 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-    rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-     <div class="container-fluid">
-       <a class="navbar-brand" href="/">Король футбола</a>
-       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-         <span class="navbar-toggler-icon"></span>
-       </button>
-       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <% if(typeof nav == 'object' && nav){
-                  nav.forEach(function(item){
-              %>
-            <li class="nav-item">
-              <a  class="nav-link" href="/footballers/<%= item.nick %>"><%= item.title %></a>
-            </li>
-                <%
-                  })}
-                %>
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <%if(user){%>
-            <form action="/logout" method="post">
-              <li class="nav-item">
-                <button type="submit" class="nav-link">Выйти</button>
-                </li>
-            </form>
-            <% } else { %>    
-                <li class="nav-item">
-                    <a class="nav-link" href="/logreg">Войти</a>
-                </li>
-            <% } %>
-          </ul>
+<html lang="zxx">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Activitar Template">
+    <meta name="keywords" content="Activitar, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%= title || 'Activitar' %></title>
 
-       </div>
-     </div>
-   </nav>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700,800,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/elegant-icons.css">
+    <link rel="stylesheet" href="/css/nice-select.css">
+    <link rel="stylesheet" href="/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/css/magnific-popup.css">
+    <link rel="stylesheet" href="/css/slicknav.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+<div id="preloder">
+    <div class="loader"></div>
+</div>
+
+<header class="header-section header-normal">
+    <div class="container-fluid">
+        <div class="logo">
+            <a href="/">
+                <img src="/img/logo1.png" alt="">
+            </a>
+        </div>
+
+        <div class="container">
+            <div class="nav-menu">
+                <nav class="mainmenu mobile-menu">
+                    <ul>
+                        <li><a href="/">Дом</a></li>
+                        <li><a href="/ronaldo_statistic">Статистика</a></li>
+                        <li><a href="/ronaldo_awards">Награды</a></li>
+                        <li><a href="/ronaldo_family">Семья</a></li>
+
+                        <% if (user) { %>
+                            <li><a href="#">Привет, <%= user.username %></a></li>
+                        <% } else { %>
+                            <li><a href="/logreg">Вход</a></li>
+                        <% } %>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div id="mobile-menu-wrap"></div>
+    </div>
+</header>
+
+<main>
     <%- body %>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-    crossorigin="anonymous"></script>
-  </body>  
-  </body>
+</main>
+
+<footer class="footer-section">
+    
+</footer>
+
+<script src="/js/jquery-3.3.1.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/jquery.magnific-popup.min.js"></script>
+<script src="/js/jquery.nice-select.min.js"></script>
+<script src="/js/jquery.slicknav.js"></script>
+<script src="/js/owl.carousel.min.js"></script>
+<script src="/js/masonry.pkgd.min.js"></script>
+<script src="/js/main.js"></script>
+
+</body>
 </html>
- <body>

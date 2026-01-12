@@ -48,32 +48,18 @@ router.post('/logout', function(req, res, next) {
 });
 
 
+const checkAuth = require('../middlewares/checkAuth');
 
-/* Статистика Роналду */
-router.get('/ronaldo_statistic', function(req, res, next) {
-    res.render('cr_main', {
-        title: "Статистика Роналду",
-        picture: "images/ronaldo_statistic.jpg",
-        desc: "За свою карьеру Криштиану Роналду забил более 800 голов и сыграл тысячи матчей за клубы и сборную. Он входит в число лучших бомбардиров в истории футбола. На поле всегда точен, быстр и невероятно вынослив. Даже в зрелом возрасте остаётся примером силы, дисциплины и стремления к победе. Каждый его выход на поле — это шоу, где он показывает, что значит настоящий профессионал."
-    });
+router.get('/ronaldo_statistic', checkAuth, (req, res) => {
+    res.render('ronaldo_statistic');
 });
 
-/* Награды Роналду */
-router.get('/ronaldo_awards', function(req, res, next) {
-    res.render('cr_main', {
-        title: "Награды Роналду",
-        picture: "images/ronaldo_awards.jpg",
-        desc: "Его коллекция трофеев поражает воображение. Несколько «Золотых мячей», «Золотые бутсы», Кубки Лиги чемпионов, титулы чемпиона разных стран — и это лишь малая часть. Он становился лучшим игроком года, лучшим бомбардиром и рекордсменом во множестве категорий. Для всех его наград давно уже нужен не один шкаф. Каждая из них — результат труда, настойчивости и огромной любви к футболу."
-    });
+router.get('/ronaldo_awards', checkAuth, (req, res) => {
+    res.render('ronaldo_awards');
 });
 
-/* Семья Роналду */
-router.get('/ronaldo_family', function(req, res, next) {
-    res.render('cr_main', {
-        title: "Семья Роналду",
-        picture: "images/ronaldo_family.jpg",
-        desc: "За громкими победами стоит человек, для которого семья — главная ценность. Роналду — заботливый отец и сын, всегда рядом со своими близкими. Он часто делится моментами из жизни детей, поддерживает их и вдохновляет своим примером. Его семья — его опора, источник тепла и силы, который помогает идти вперёд, несмотря на все трудности."
-    });
+router.get('/ronaldo_family', checkAuth, (req, res) => {
+    res.render('ronaldo_family');
 });
 
 module.exports = router;

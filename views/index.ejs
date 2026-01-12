@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="/css/magnific-popup.css" type="text/css">
     <link rel="stylesheet" href="/css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <link rel="stylesheet" href="/css/background.css">
 </head>
 
 <body>
@@ -81,7 +82,7 @@
                                 <% if(user) {%>
                                 <h1>Привет <%= user.username %></h1>
                                 <h2>Роналду лучший бомбардир человечества</h2>
-                                <h1>954 гола</h1>
+                                <h1>959 голов</h1>
                                 <a class="primary-btn" href="/ronaldo_statistic">Его статистика</a>
                                 <% }else{ %>
                                 <h1>Привет незалогиненный пользователь</h1>
@@ -138,23 +139,41 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="feature-item set-bg" data-setbg="/img/feature/feature-11.jpg">
-                        <h3>И вправду хорош!</h3>
-                        <p>Роналду действительно поражает все человечество<br /> своими рекордами</p>
-                        <a href="/ronaldo_statistic" class="primary-btn f-btn">Читать больше</a>
+                                <% if(user) {%>
+                                <h3>И вправду хорош!</h3>
+                                <p>Роналду действительно поражает все человечество<br /> своими рекордами</p>
+                                <a href="/ronaldo_statistic" class="primary-btn f-btn">Читать больше</a>
+                                <% }else{ %>
+                                <h3>Сколько у него трофеев?</h3>
+                                <p>Авторизация тебе все расскажет!</p>
+                                <a class="primary-btn" href="/logreg">Авторизация</a>
+                                <% } %>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="feature-item set-bg" data-setbg="/img/feature/feature-22.jpg">
-                        <h3>Усиленные тренировки</h3>
-                        <p>Помогли завоевать ему практически<br /> все возможные награды</p>
-                        <a href="/ronaldo_awards" class="primary-btn f-btn">Читать больше</a>
+                                <% if(user) {%>
+                                <h3>Усиленные тренировки</h3>
+                                <p>Помогли завоевать ему практически<br /> все возможные награды</p>
+                                <a href="/ronaldo_awards" class="primary-btn f-btn">Читать больше</a>
+                                <% }else{ %>
+                                <h3>Почему он в мундире?</h3>
+                                <p>После авторизации ты узнаешь это!</p>
+                                <a class="primary-btn" href="/logreg">Авторизация</a>
+                                <% } %>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="feature-item set-bg" data-setbg="/img/feature/feature-33.jpg">
-                        <h3>Семья</h3>
-                        <p>Которая и вправду мотивирует его<br /> только совершенствоваться</p>
-                        <a href="/ronaldo_family" class="primary-btn f-btn">Читать больше</a>
+                                <% if(user) {%>
+                                <h3>Семья</h3>
+                                <p>Которая и вправду мотивирует его<br /> только совершенствоваться</p>
+                                <a href="/ronaldo_family" class="primary-btn f-btn">Читать больше</a>
+                                <% }else{ %>
+                                <h3>Что с его шеей?</h3>
+                                <p>Авторизуйся, чтобы узнать это!</p>
+                                <a class="primary-btn" href="/logreg">Авторизация</a>
+                                <% } %>
                     </div>
                 </div>
             </div>
@@ -168,12 +187,18 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="about-text">
+                        <% if(user) {%>
                         <h2>Роналду фоткался со мной!!!</h2>
                         <p class="short-details">Поразительно, как даже самые знаменитые звезды не отказывают своим фанатам в простом фото
                         <p class="long-details">Именно так и произошло, когда я отдыхал со своими друзьями в Бахчисарае. Мимо нашего домика проходил Криштиану Роналду, который приехал в Бахчисарай со сборной Португалии отдохнуть.
                             И он, решив не терять момент, попросил фото со мной, находясь прямо в тренировочной форме. Я в этот момент все снимал на экшн камеру, но к сожалению записи не сохранились.</p>
                         </p>
-                        <a href="#" class="primary-btn about-btn">Пожаловаться</a>
+                        <a href="https://www.instagram.com/cristiano/" class="primary-btn about-btn">Пожаловаться</a>
+                        <% }else{ %>
+                        <h2>Роналду фоткался со мной?</h2>
+                        <p class="short-details">Узнай полную историю, войдя в свой аккаунт</p>
+                        <a href="/logreg" class="primary-btn about-btn">Авторизоваться</a>
+                        <% } %>
                     </div>
                 </div>
                 <div class="col-lg-6">

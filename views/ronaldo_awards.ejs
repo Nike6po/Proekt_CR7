@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    <meta charset="UTF-8">
+    <title>Награды Роналду</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700,800,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/background.css">
+</head>
+
+<body>
+
+<header class="header-section header-normal">
+    <div class="container">
+        <div class="logo">
+            <a href="/"><img src="/img/logo1.png"></a>
+        </div>
+        </div>
+        <div class="container">
+        <div class="nav-menu">
+                    <nav class="mainmenu mobile-menu">
+                        <ul>
+                            <li> <a href="/">Дом</a></li>
+                            <li><a href="/ronaldo_statistic">Статистика Роналду</a></li>
+                            <li class="active"><a href="/ronaldo_awards">Награды Роналду</a></li>
+                            <li><a href="/ronaldo_family">Семья Роналду</a></li>
+                            <li><%if(user){%>
+                                <form action="/logout" method="post">
+                                <li class="nav-item">
+                                    <button type="submit" class="nav-link">Выйти</button>
+                                    </li>
+                                </form>
+                                <% } else { %>    
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/logreg">Войти</a>
+                                    </li>
+                                <% } %></li>
+                                <ul class="dropdown">
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+    </div>
+    </div>
+</header>
+
+<section class="feature-section spad">
+    <div class="container">
+        <div class="section-title text-center mb-4">
+            <h2>Награды Роналду</h2>
+        </div>
+
+        <div class="row align-items-center">
+            <!-- Левая колонка с фотографией -->
+             <div class="col-md-6 mb-3 mb-md-0">
+                <img src="/images/ronaldo_awards.jpg" alt="Роналду" 
+                     class="img-fluid rounded" style="transform: scale(1.05);">
+            </div>
+
+            <!-- Правая колонка с текстом -->
+            <div class="col-md-6">
+                <p><h4>Его коллекция трофеев поражает воображение. Несколько «Золотых мячей», «Золотые бутсы», Кубки Лиги чемпионов, титулы чемпиона разных стран – и это лишь малая часть.</h4></p>
+                <p><h4>Он становился лучшим игроком года, лучшим бомбардиром и рекордсменом во множестве категорий. Для всех его наград давно уже нужен не один шкаф. Каждая из них – результат труда, настойчивости и огромной любви к футболу.</h4></p>
+
+                <div class="row">
+                    <div class="col-12 mb-2"><h3>🏆 5× Золотой мяч</h3></div>
+                    <div class="col-12 mb-2"><h3>🥇 4× Золотая бутса</h3></div>
+                    <div class="col-12 mb-2"><h3>🏆 Чемпион Европы 2016</h3></div>
+                    <div class="col-12 mb-2"><h3>⚽ Лучший бомбардир ЛЧ</h3></div>
+                    <div class="col-12 mb-2"><h3>🌍 Лучший игрок FIFA</h3></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
